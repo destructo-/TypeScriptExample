@@ -1,0 +1,20 @@
+{
+  "name": "type-script-example",
+  "version": "0.0.1",
+  "description": "trying typescript",
+  "main": "bin/intex.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --removeComments --module commonjs --target ES5 --out public/js/index.js src/main.ts",
+    "less": "lessc less/*.less > public/css/style.css"
+  },
+
+  "devDependencies": {
+    "typescript": "^1.4.1",
+    "less": "^2.5.1"
+  },
+
+  "author": "destructo",
+  "license": "ISC"
+}

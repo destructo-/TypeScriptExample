@@ -1,0 +1,25 @@
+### IDE Files ###
+.idea
+*.iml
+
+### Build artifacts ###
+/public
+/artifacts
+/templates/processed/*
+
+### Test artifacts ###
+/test/coverage
+
+### Local settings ###
+/src/settings/settings.js
+/direct_env
+
+### NPM files ###
+/node_modules
+npm-debug.log
+
+### MAAAAC ###
+.DS_Store
+
+### tsc compiller ###
+**/*.js
