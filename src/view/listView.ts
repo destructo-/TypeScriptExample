@@ -20,14 +20,16 @@ class ListView {
     var self = this;
 
     this.add.onclick = function() {
-      var element:IPayload = {
-        id:'',
-        text: self.input.value,
-        description: ''
-      };
+      if (self.input.value !== '') {
+        var element:IPayload = {
+          id:'',
+          text: self.input.value,
+          description: ''
+        };
 
-      self.dispatcher.publishEvent('new-task', element);
-      self.input.value = '';
+        self.dispatcher.publishEvent('new-task', element);
+        self.input.value = '';
+      }
     }
   }
 
