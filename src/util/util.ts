@@ -9,6 +9,10 @@ class Util {
       s4() + '-' + s4() + s4() + s4();
   }
 
+  public static truncate(str:string, len:number) {
+    return str.length > len ? (str.substr(0, len - 3) + '...') : str;
+  }
+
   public static createListItemView(item:ListItem):HTMLElement {
     var span = document.createElement('span');
 

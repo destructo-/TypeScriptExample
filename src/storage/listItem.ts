@@ -12,7 +12,7 @@ class ListItem {
   private id:string;
 
   constructor(text:string, description:string, id?:string) {
-    this.text = text;
+    this.text = Util.truncate(text, 50);
     this.description = description;
     this.isDone = false;
     this.id = id || Util.generateId();
