@@ -10,13 +10,12 @@ class Util {
   }
 
   public static createListItemView(item:ListItem):HTMLElement {
-    var closeButton = document.createElement('div');
-    closeButton.className = 'close-button';
-    closeButton.innerText = 'X';
+    var span = document.createElement('span');
 
     var container = document.createElement('li');
     container.id = item.getId();
-    container.innerText = item.getText();
+    container.innerHTML =
+        '<span class="close-button">X</span>' + item.getText();
 
     return container;
   }

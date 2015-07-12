@@ -5,6 +5,7 @@ html {
 body {
   background: #f2f2f2;
   height: 100%;
+  font-family: Arial, Arial, Helvetica, sans-serif;
 }
 
 .list-wrapper {
@@ -17,14 +18,21 @@ body {
     margin: 0;
     padding: 5px;
     border-top: 1px solid #fff;
+    cursor: default;
 
     li {
       list-style: none;
-      padding: 5px;
+      padding: 10px;
       margin: 5px;
 
       .close-button {
-        
+        cursor: pointer;
+        margin-right: 10px;
+        visibility: hidden;
+      }
+
+      &:hover .close-button {
+        visibility: visible;
       }
     }
   }
@@ -36,19 +44,23 @@ body {
     input {
       margin:10px;
       padding: 10px;
-      width: 430px;
-      border-radius: 3px;
+      width: 444px;
+      border-radius: 3px 0 0 3px;
       border:solid 1px #c1c1c1;
+      border-right: 0px;
       outline: none;
+      margin-right: 0;
+      height: 16px;
     }
 
     .button {
       padding: 10px;
       margin: 10px;
+      margin-left:0;
       background: #bcbcbc;
       cursor: pointer;
       float: right;
-      border-radius: 3px;
+      border-radius: 0 3px 3px 0;
     }
   }
 }
