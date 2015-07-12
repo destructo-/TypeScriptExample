@@ -18,7 +18,6 @@
         "./src/storage/listItem.ts",
         "./src/storage/storage.ts",
         "./src/util/util.ts",
-        "./src/view/IView.ts",
         "./src/view/listView.ts"
     ]
 }

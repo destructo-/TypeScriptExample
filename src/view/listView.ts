@@ -32,10 +32,6 @@ class ListView {
   }
 
   public updateView(item:ListItem) {
-    var element = document.createElement('li');
-    element.id = item.getId();
-    element.innerText = item.getText();
-
-    this.list.appendChild(element);
+    this.list.appendChild(Util.createListItemView(item));
   }
 }

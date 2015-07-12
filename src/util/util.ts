@@ -8,4 +8,16 @@ class Util {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
       s4() + '-' + s4() + s4() + s4();
   }
+
+  public static createListItemView(item:ListItem):HTMLElement {
+    var closeButton = document.createElement('div');
+    closeButton.className = 'close-button';
+    closeButton.innerText = 'X';
+
+    var container = document.createElement('li');
+    container.id = item.getId();
+    container.innerText = item.getText();
+
+    return container;
+  }
 }
