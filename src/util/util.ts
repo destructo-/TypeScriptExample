@@ -13,7 +13,7 @@ class Util {
     return str.length > len ? (str.substr(0, len - 3) + '...') : str;
   }
 
-  public static createListItemView(item:ListItem):HTMLElement {
+  public static createListItemView(item:ListItem):HTMLLIElement {
     var span = document.createElement('span');
 
     var container = document.createElement('li');

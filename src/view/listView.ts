@@ -1,18 +1,11 @@
 /// <reference path="../dispatcher/dispatcher"/>
 
 class ListView {
-  private dispatcher:Dispatcher;
+  constructor(private dispatcher:Dispatcher,
+      private list:HTMLElement,
+      private add:HTMLElement,
+      private input:HTMLInputElement) {
 
-  private list:HTMLElement;
-  private add:HTMLElement;
-  private input:HTMLInputElement;
-
-  constructor(dispatcer:Dispatcher,
-    list:HTMLElement, add:HTMLElement, input:HTMLInputElement) {
-    this.list = list;
-    this.add = add;
-    this.input = input;
-    this.dispatcher = dispatcer;
     this.initEvents();
   }
 
@@ -27,7 +20,7 @@ class ListView {
           description: ''
         };
 
-        self.dispatcher.publishEvent('new-task', element);
+        self.dispatcher.publishEvent('new-task', <IPayload>element);
         self.input.value = '';
       }
     }

@@ -5,15 +5,11 @@
 
 class List {
   private items:Array<ListItem>;
-  private view:ListView;
-  private dispatcher:Dispatcher;
   private storage:LocalStorage;
 
-  constructor(dispatcher:Dispatcher, view:ListView) {
+  constructor(private dispatcher:Dispatcher, private view:ListView) {
     this.storage = new LocalStorage('list');
-    this.view = view;
     this.items = [];
-    this.dispatcher = dispatcher;
     this.initListeners();
     this.restore();
   }
