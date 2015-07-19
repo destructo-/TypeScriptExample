@@ -37,14 +37,12 @@ header {
   .list {
     list-style: none;
     margin: 0;
-    padding: 5px;
-    border-top: 1px solid #fff;
+    padding: 0;
     cursor: default;
 
     li {
       list-style: none;
-      padding: 10px;
-      margin: 5px;
+      padding: 15px 10px;
 
       .close-button {
         cursor: pointer;
@@ -52,8 +50,13 @@ header {
         visibility: hidden;
       }
 
-      &:hover .close-button {
-        visibility: visible;
+      &:hover {
+        background: #eee;
+        cursor: pointer;
+
+        .close-button {
+          visibility: visible;
+        }
       }
     }
   }
